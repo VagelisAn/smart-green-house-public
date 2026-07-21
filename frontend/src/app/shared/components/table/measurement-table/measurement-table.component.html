@@ -1,0 +1,35 @@
+<p-table [value]="measurements" [paginator]="true" [rows]="10" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>#</th>
+            <th>Type</th>
+            <th>Value</th>
+            <th>Unit</th>
+            <th>Date</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-m let-i="rowIndex">
+        <tr>
+            <td>
+                {{i+1}}
+            </td>
+            <td>
+                <strong>
+                    {{m.type}}
+                </strong>
+            </td>
+            <td>
+                <span style="color:#34d399">
+                    {{m.value}}
+                </span>
+            </td>
+            <td>
+                {{m.unit}}
+            </td>
+            <td>
+                {{m.timestamp
+                | date:'dd/MM/yyyy HH:mm:ss'}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

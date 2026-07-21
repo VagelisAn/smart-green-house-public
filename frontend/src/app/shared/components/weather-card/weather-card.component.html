@@ -1,0 +1,32 @@
+<p-card *ngIf="weather as w">
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    ">
+        <div>
+            <h2>
+                <i class="pi pi-cloud"></i>
+                {{weather.location}}
+            </h2>
+            <h1 style="font-size:3rem">
+                {{weather.temperature}} °C
+            </h1>
+            <span>
+                {{weather.weatherDescription}}
+            </span>
+        </div>
+        <div>
+            <p>
+                <i class="pi pi-tint"></i>
+                Humidity:
+                {{weather.humidity}} %
+            </p>
+            <p>
+                <i class="pi pi-send"></i>
+                Wind:
+                {{weather.windSpeed}} km/h
+            </p>
+        </div>
+    </div>
+</p-card>

@@ -1,0 +1,10 @@
+<div>
+    <h2>
+        {{sensor.name}}
+    </h2>
+    <app-sensor-chart [measurements]="measurements" [sensorName]="sensor.name">
+    </app-sensor-chart>
+    <br>
+    <app-measurement-table [measurements]="measurements">
+    </app-measurement-table>
+</div>

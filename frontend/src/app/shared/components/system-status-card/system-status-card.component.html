@@ -1,0 +1,44 @@
+<p-card *ngIf="status as s">
+    <h2>
+        <i class="pi pi-chart-bar"></i>
+        System Status
+    </h2>
+    <div>
+        <p>
+            <i class="pi pi-server"></i>
+            Total Sensors:
+            <strong>
+                {{s.totalSensors}}
+            </strong>
+        </p>
+        <p>
+            🟢 Online:
+            <strong>
+                {{s.onlineSensors}}
+            </strong>
+        </p>
+        <p>
+            🔴 Offline:
+            <strong>
+                {{s.offlineSensors}}
+            </strong>
+        </p>
+        <p>
+            ⚠ Alerts:
+            <strong>
+                {{s.activeAlerts}}
+            </strong>
+        </p>
+        <p>
+            MQTT:
+            <p-tag
+                [value]="s.mqttOnline ? 'CONNECTED':'OFFLINE'"
+                [severity]="s.mqttOnline ? 'success':'danger'">
+            </p-tag>
+        </p>
+        <p *ngIf="s.lastUpdate">
+            Last update:
+            {{s.lastUpdate | date:'HH:mm:ss'}}
+        </p>
+    </div>
+</p-card>

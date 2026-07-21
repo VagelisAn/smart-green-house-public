@@ -1,0 +1,52 @@
+<div style="padding:2rem;max-width:1200px;margin:auto;">
+    <div *ngIf="currentView==='list'">
+        <!-- TOP DASHBOARD -->
+        <div style="
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:1rem;
+            margin-bottom:2rem;
+        ">
+            <app-weather-card>
+            </app-weather-card>
+        
+            <app-system-status-card>
+            </app-system-status-card>
+        </div>
+        <!-- SENSOR HEADER -->
+        <div style="
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:2rem;
+        ">
+            <h1 style="color:#34d399">
+                <i class="pi pi-server"></i>
+                Διαχείριση Αισθητήρων
+            </h1>
+            <p-button 
+                label="Νέος Αισθητήρας"
+                icon="pi pi-plus"
+                severity="success"
+                (onClick)="openAddSensor()">
+            </p-button>
+        </div>
+        <!-- SENSOR TABLE -->
+        <app-sensor-list
+            (sensorSelected)="selectSensor($event)"
+            (edit)="openEdit($event)"
+            (deleted)="reloadSensors()">
+        </app-sensor-list>
+    </div>
+    <!-- DETAILS -->
+    <app-sensor-detail
+        *ngIf="currentView==='details'"
+        [sensor]="selectedSensor"
+        (back)="goBack()">
+    </app-sensor-detail>
+    <!-- ADD SENSOR -->
+    <app-add-sensor-dialog
+        #addDialog
+        (saved)="reloadSensors()">
+    </app-add-sensor-dialog>
+</div>

@@ -1,0 +1,25 @@
+<div>
+    <div style="margin-bottom:1.5rem;">
+        <p-button label="Επιστροφή" icon="pi pi-arrow-left" severity="secondary" (onClick)="goBack()">
+        </p-button>
+    </div>
+    <div style="margin-bottom:2rem;">
+        <h2 style="color:#60a5fa">
+            {{sensor.name}}
+        </h2>
+        <small style="color:#a1a1aa">
+            Τοποθεσία: {{sensor.location}}
+            |
+            Τύπος: {{sensor.type}}
+        </small>
+    </div>
+    <div style="margin-bottom:2rem;">
+        <p-button label="Live Data" icon="pi pi-bolt" severity="success" (onClick)="loadLiveData()">
+        </p-button>
+    </div>
+    <app-sensor-chart [measurements]="measurements" [sensorName]="sensor.name">
+    </app-sensor-chart>
+    <br>
+    <app-measurement-table [measurements]="measurements">
+    </app-measurement-table>
+</div>

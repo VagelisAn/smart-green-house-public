@@ -1,0 +1,27 @@
+<p-dialog header="Add New Sensor" [(visible)]="visible" [modal]="true" [style]="{width: '450px'}" [draggable]="false"
+    [resizable]="false">
+    <div style="display: flex; flex-direction: column; gap: 1.2rem; padding: 1rem 0;">
+        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+            <label for="name">Sensor Name</label>
+            <input pInputText id="name" [(ngModel)]="newSensor.name" placeholder="e.g. DHT22 Bottom" />
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+            <label for="model">Model</label>
+            <input pInputText id="model" [(ngModel)]="newSensor.model" placeholder="e.g. DHT22" />
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+            <label for="type">Type</label>
+            <input pInputText id="type" [(ngModel)]="newSensor.type" placeholder="e.g. TEMPERATURE" />
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+            <label for="location">Location</label>
+            <input pInputText id="location" [(ngModel)]="newSensor.location" placeholder="e.g. Greenhouse Zone 1" />
+        </div>
+    </div>
+    <ng-template pTemplate="footer">
+        <p-button label="Cancel" icon="pi pi-times" severity="danger" [text]="true" (onClick)="visible=false">
+        </p-button>
+        <p-button label="Save" icon="pi pi-check" severity="success" (onClick)="saveSensor()">
+        </p-button>
+    </ng-template>
+</p-dialog>
