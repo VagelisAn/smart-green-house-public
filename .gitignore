@@ -1,0 +1,26 @@
+# Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/proxy.conf.json
+
+# Spring
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/HELP2.md
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Mac
+.DS_Store
+
+# Arduino
+*.tmp
+
+# Environment
+frontend/src/environments/environment.development.ts
+frontend/src/environments/environment.local.ts
+backend/.env
