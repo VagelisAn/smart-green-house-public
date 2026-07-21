@@ -293,4 +293,8 @@ The complete project documentation includes:
 * Angular dashboard
 * Automation logic
 
-Source code and additional technical documentation will be published progressively.
+# License
+
+This project is licensed under the GNU General Public License v3.0.
+
+See the [LICENSE](LICENSE) file for more information.
