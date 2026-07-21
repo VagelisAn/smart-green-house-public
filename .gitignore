@@ -9,8 +9,6 @@ frontend/proxy.conf.json
 backend/target/
 backend/.mvn/wrapper/maven-wrapper.jar
 backend/HELP2.md
-backend/.env
-backend/.env.*
 backend/src/main/resources/application-local.properties
 # IDE
 .idea/
@@ -27,3 +25,4 @@ backend/src/main/resources/application-local.properties
 frontend/src/environments/environment.development.ts
 frontend/src/environments/environment.local.ts
 backend/.env
+backend/.env.*
