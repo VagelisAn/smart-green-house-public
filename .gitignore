@@ -4,11 +4,14 @@ frontend/dist/
 frontend/.angular/
 frontend/proxy.conf.json
 
+
 # Spring
 backend/target/
 backend/.mvn/wrapper/maven-wrapper.jar
 backend/HELP2.md
-
+backend/.env
+backend/.env.*
+backend/src/main/resources/application-local.properties
 # IDE
 .idea/
 .vscode/
