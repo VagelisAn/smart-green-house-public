@@ -5,12 +5,13 @@ import com.iot.green.house.dto.SystemStatusDTO;
 import com.iot.green.house.service.SystemStatusService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/system")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class SystemStatusController implements SystemStatusControllerApi {
 
     private final SystemStatusService systemStatusService;
