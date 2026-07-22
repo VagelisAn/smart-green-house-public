@@ -105,7 +105,7 @@ public class MqttListener {
                         m.setUnit(SensorUnit);
 
                         // Γράφει στη Βάση Δεδομένων ΜΟΝΟ όταν αλλάξει η τιμή
-//                        measurementRepo.save(m);
+                        measurementRepo.save(m);
                         webSocketNotificationService.sendSensorAlert(
                                 createNotification(sensor, value)
                         );
